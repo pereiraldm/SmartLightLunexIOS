@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		767292FC2B67DB2E00773D51 /* RenameDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767292FB2B67DB2E00773D51 /* RenameDeviceView.swift */; };
+		767293012B67EF4000773D51 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767293002B67EF4000773D51 /* ColorExtension.swift */; };
+		76729FF52B288F8500F3567D /* Lunex_Smart_LightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76729FF42B288F8500F3567D /* Lunex_Smart_LightApp.swift */; };
+		76729FF72B288F8500F3567D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76729FF62B288F8500F3567D /* ContentView.swift */; };
+		76729FF92B288F8700F3567D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76729FF82B288F8700F3567D /* Assets.xcassets */; };
+		76729FFC2B288F8700F3567D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76729FFB2B288F8700F3567D /* Preview Assets.xcassets */; };
+		7672A00F2B289DB000F3567D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A00E2B289DB000F3567D /* HomeView.swift */; };
+		7672A0112B289E3900F3567D /* AdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A0102B289E3900F3567D /* AdvancedView.swift */; };
+		7672A0132B289E4200F3567D /* BluetoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A0122B289E4200F3567D /* BluetoothView.swift */; };
+		7672A0152B289E4D00F3567D /* LunexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A0142B289E4D00F3567D /* LunexView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		767292FB2B67DB2E00773D51 /* RenameDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameDeviceView.swift; sourceTree = "<group>"; };
+		767293002B67EF4000773D51 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		76729FF12B288F8500F3567D /* Lunex Smart Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunex Smart Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76729FF42B288F8500F3567D /* Lunex_Smart_LightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunex_Smart_LightApp.swift; sourceTree = "<group>"; };
+		76729FF62B288F8500F3567D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		76729FF82B288F8700F3567D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76729FFB2B288F8700F3567D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7672A00E2B289DB000F3567D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7672A0102B289E3900F3567D /* AdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
+		7672A0122B289E4200F3567D /* BluetoothView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothView.swift; sourceTree = "<group>"; };
+		7672A0142B289E4D00F3567D /* LunexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunexView.swift; sourceTree = "<group>"; };
+		76C11F5F2B56C419003EB349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76729FEE2B288F8500F3567D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76729FE82B288F8500F3567D = {
+			isa = PBXGroup;
+			children = (
+				76729FF32B288F8500F3567D /* Lunex Smart Light */,
+				76729FF22B288F8500F3567D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76729FF22B288F8500F3567D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76729FF12B288F8500F3567D /* Lunex Smart Light.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76729FF32B288F8500F3567D /* Lunex Smart Light */ = {
+			isa = PBXGroup;
+			children = (
+				7672A00E2B289DB000F3567D /* HomeView.swift */,
+				7672A0102B289E3900F3567D /* AdvancedView.swift */,
+				7672A0122B289E4200F3567D /* BluetoothView.swift */,
+				76729FF42B288F8500F3567D /* Lunex_Smart_LightApp.swift */,
+				7672A0142B289E4D00F3567D /* LunexView.swift */,
+				76729FF62B288F8500F3567D /* ContentView.swift */,
+				767292FB2B67DB2E00773D51 /* RenameDeviceView.swift */,
+				767293002B67EF4000773D51 /* ColorExtension.swift */,
+				76729FF82B288F8700F3567D /* Assets.xcassets */,
+				76C11F602B56C419003EB349 /* Info.plist */,
+				76729FFA2B288F8700F3567D /* Preview Content */,
+			);
+			path = "Lunex Smart Light";
+			sourceTree = "<group>";
+		};
+		76729FFA2B288F8700F3567D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				76729FFB2B288F8700F3567D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76729FF02B288F8500F3567D /* Lunex Smart Light */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76729FFF2B288F8700F3567D /* Build configuration list for PBXNativeTarget "Lunex Smart Light" */;
+			buildPhases = (
+				76729FED2B288F8500F3567D /* Sources */,
+				76729FEE2B288F8500F3567D /* Frameworks */,
+				76729FEF2B288F8500F3567D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lunex Smart Light";
+			productName = "Lunex Smart Light";
+			productReference = 76729FF12B288F8500F3567D /* Lunex Smart Light.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76729FE92B288F8500F3567D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					76729FF02B288F8500F3567D = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 76729FEC2B288F8500F3567D /* Build configuration list for PBXProject "Lunex Smart Light" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76729FE82B288F8500F3567D;
+			productRefGroup = 76729FF22B288F8500F3567D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76729FF02B288F8500F3567D /* Lunex Smart Light */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76729FEF2B288F8500F3567D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76729FFC2B288F8700F3567D /* Preview Assets.xcassets in Resources */,
+				76729FF92B288F8700F3567D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76729FED2B288F8500F3567D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7672A00F2B289DB000F3567D /* HomeView.swift in Sources */,
+				7672A0152B289E4D00F3567D /* LunexView.swift in Sources */,
+				7672A0132B289E4200F3567D /* BluetoothView.swift in Sources */,
+				767293012B67EF4000773D51 /* ColorExtension.swift in Sources */,
+				767292FC2B67DB2E00773D51 /* RenameDeviceView.swift in Sources */,
+				76729FF72B288F8500F3567D /* ContentView.swift in Sources */,
+				7672A0112B289E3900F3567D /* AdvancedView.swift in Sources */,
+				76729FF52B288F8500F3567D /* Lunex_Smart_LightApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76C11F602B56C419003EB349 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76C11F5F2B56C419003EB349 /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76729FFD2B288F8700F3567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76729FFE2B288F8700F3567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7672A0002B288F8700F3567D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_ASSET_PATHS = "\"Lunex Smart Light/Preview Content\"";
+				DEVELOPMENT_TEAM = 3438RFRT99;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Lunex Smart Light/Base.lproj/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Lunex Smart Light";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este aplicativo usa Bluetooth para se conectar e comunicar com as lâmpadas inteligentes Lunex, permitindo o controle da iluminação da diretamente do seu dispositivo.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este aplicativo usa Bluetooth para se conectar e comunicar com as lâmpadas inteligentes Lunex, permitindo o controle da iluminação da diretamente do seu dispositivo.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.lunex.Lunex-Smart-Light";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7672A0012B288F8700F3567D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_ASSET_PATHS = "\"Lunex Smart Light/Preview Content\"";
+				DEVELOPMENT_TEAM = 3438RFRT99;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Lunex Smart Light/Base.lproj/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Lunex Smart Light";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Este aplicativo usa Bluetooth para se conectar e comunicar com as lâmpadas inteligentes Lunex, permitindo o controle da iluminação da diretamente do seu dispositivo.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Este aplicativo usa Bluetooth para se conectar e comunicar com as lâmpadas inteligentes Lunex, permitindo o controle da iluminação da diretamente do seu dispositivo.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.lunex.Lunex-Smart-Light";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76729FEC2B288F8500F3567D /* Build configuration list for PBXProject "Lunex Smart Light" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76729FFD2B288F8700F3567D /* Debug */,
+				76729FFE2B288F8700F3567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76729FFF2B288F8700F3567D /* Build configuration list for PBXNativeTarget "Lunex Smart Light" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7672A0002B288F8700F3567D /* Debug */,
+				7672A0012B288F8700F3567D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76729FE92B288F8500F3567D /* Project object */;
+}
