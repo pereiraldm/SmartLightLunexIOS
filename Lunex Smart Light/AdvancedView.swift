@@ -24,7 +24,18 @@ struct AdvancedView: View {
         // Cor de fundo que abrange toda a tela
         Color(hex: "#1b2c5d")
                 .edgesIgnoringSafeArea([.leading, .trailing])
+            
         VStack {
+            Rectangle()
+                .fill(Color(hex: "#f37021"))
+                .frame(height: 40)
+                .frame(maxWidth: .infinity)
+                .cornerRadius(10)
+                .overlay(
+                    Text(displayConnectedDevices())
+                        .foregroundColor(Color(hex: "#1b2c5d"))
+                        .bold()
+                )
             if bluetoothViewModel.isConnected {
                 HStack {
                     Image(systemName: bluetoothViewModel.whiteColdLightOn ? "lightbulb.fill" : "lightbulb")
@@ -33,20 +44,7 @@ struct AdvancedView: View {
                     Image(systemName: bluetoothViewModel.whiteHotLightOn ? "lightbulb.fill" : "lightbulb")
                         .foregroundColor(bluetoothViewModel.whiteHotLightOn ? .yellow : .gray)
                 }
-                Rectangle()
-                    .fill(Color(hex: "#f37021"))
-                    .frame(height: 40)
-                    .frame(maxWidth: .infinity)
-                    .cornerRadius(10)
-                    .overlay(
-                        Text("DISPOSITIVO CONECTADO: \(bluetoothViewModel.selectedDevice?.name ?? "")")
-                            .foregroundColor(Color(hex: "#1b2c5d"))
-                            .bold()
-                    )
-                
-                    .padding()
-                
-                
+                .padding()
                 HStack {
                     Text("ATIVAR")
                         .foregroundColor(Color(hex: "#1b2c5d"))
@@ -62,11 +60,11 @@ struct AdvancedView: View {
                 )
                 .onChange(of: isToggleButtonEnabled) { isEnabled in
                     if isEnabled {
-                        bluetoothViewModel.sendCommand("avancado")
+                        bluetoothViewModel.sendCommandToAllDevices("avancado")
                         // Enviar o valor atual do Slider imediatamente após ativar o ToggleButton
-                        bluetoothViewModel.sendCommand("\(sliderValue)")
+                        bluetoothViewModel.sendCommandToAllDevices("\(sliderValue)")
                     } else {
-                        bluetoothViewModel.sendCommand("desligarAvancado")
+                        bluetoothViewModel.sendCommandToAllDevices("desligarAvancado")
                     }
                 }
                 //Spacer()
@@ -79,11 +77,11 @@ struct AdvancedView: View {
                         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
                             if lastSliderValue == newValue { // Verifica se o valor do Slider não mudou
                                 let mappedValue = Int(newValue * (1024 / 255))
-                                bluetoothViewModel.sendCommand("\(mappedValue)")
+                                bluetoothViewModel.sendCommandToAllDevices("\(mappedValue)")
                             }
                         }
                     }
-                
+                .padding()
                 HStack{
                     Text("COR: \(Int(adjustedSliderValue)) (3000 - 6500)") .foregroundColor(Color(hex: "#1b2c5d"))
                         .bold()
@@ -102,11 +100,11 @@ struct AdvancedView: View {
                         // Iniciar um timer para atrasar o envio do comando
                         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
                             if lastBrightnessValue == newValue { // Verifica se o valor do Slider não mudou
-                                bluetoothViewModel.sendCommand("INTENSIDADE: \(String(describing: newValue))")
+                                bluetoothViewModel.sendCommandToAllDevices("INTENSIDADE: \(String(describing: newValue))")
                             }
                         }
                     }
-                
+                .padding()
                 HStack {
                     Text("INTENSIDADE: \(Int(brightnessValue)) (0 - 100)") .foregroundColor(Color(hex: "#1b2c5d"))
                         .bold()
@@ -120,16 +118,7 @@ struct AdvancedView: View {
             }
                
             } else {
-                Rectangle()
-                    .fill(Color(hex: "#f37021"))
-                    .frame(height: 40)
-                    .frame(maxWidth: .infinity)
-                    .cornerRadius(10)
-                    .overlay(
-                        Text("NENHUM DISPOSITIVO CONECTADO")
-                            .foregroundColor(Color(hex: "#1b2c5d"))
-                            .bold()
-                    )
+
             }
         }
             .padding()
@@ -137,7 +126,7 @@ struct AdvancedView: View {
             .onChange(of: bluetoothViewModel.isConnected) { isConnected in
                 if !isConnected {
                     isToggleButtonEnabled = false
-                    bluetoothViewModel.sendCommand("desligarAvancado") // Desativa o modo avançado
+                    bluetoothViewModel.sendCommandToAllDevices("desligarAvancado") // Desativa o modo avançado
                 }
             }
         }
@@ -149,11 +138,25 @@ struct AdvancedView: View {
                     if !isConnected {
                         isToggleButtonEnabled = false
                         // Adicionalmente, envie um comando para desligar o modo avançado
-                        bluetoothViewModel.sendCommand("desligarAvancado")
+                        bluetoothViewModel.sendCommandToAllDevices("desligarAvancado")
                     }
                 }
         .background(Color.init(hex: "#f37021").edgesIgnoringSafeArea(.bottom)) // Aplica a cor vermelha apenas na parte inferior
     }
+    
+    // Function to determine the display text for connected devices
+    private func displayConnectedDevices() -> String {
+        let count = bluetoothViewModel.connectedDevices.count
+        if count == 1 {
+            if let device = bluetoothViewModel.connectedDevices.first {
+                let displayName = bluetoothViewModel.getDisplayName(for: device)
+                return "DISPOSITIVO CONECTADO: \(displayName)"
+            }
+        }  else if count > 1 {
+            return "DISPOSITIVOS CONECTADOS: \(count)"
+        }
+        return "NENHUM DISPOSITIVO CONECTADO"
+    } 
 }
 
 struct AdvancedView_Previews: PreviewProvider {

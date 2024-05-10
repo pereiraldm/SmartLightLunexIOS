@@ -1,37 +1,21 @@
-//
-//  AdvancedView.swift
-//  Lunex Smart Light
-//
-//  Created by Lucas Pereira on 12/12/23.
-//
-
 import SwiftUI
-
 struct HomeView: View {
-    @State private var isConnected = false // Exemplo, deve ser atualizado com a lógica real
-    @State private var showAlert = false // Estado para controlar a visibilidade do alerta
     @EnvironmentObject var bluetoothViewModel: BluetoothViewModel
-    @State private var isBluetoothEnabled = true // Este estado deve ser atualizado com a lógica real do Bluetooth
-    
-    private var showVideoManualAlert: Bool {
-        UserDefaults.standard.bool(forKey: "showVideoManualAlert") == false
-    }
+    @State private var showAlert = false // To control alert visibility
+    @State private var showVideoManualAlert: Bool = UserDefaults.standard.bool(forKey: "showVideoManualAlert") == false
     
     var body: some View {
         ZStack {
-        // Cor de fundo que abrange toda a tela
-        Color(hex: "#1b2c5d")
-                .edgesIgnoringSafeArea([.leading, .trailing])
-            
+            Color(hex: "#1b2c5d").edgesIgnoringSafeArea([.leading, .trailing])
             VStack {
+                // Bluetooth status and alert
                 Image(bluetoothViewModel.isBluetoothEnabled ? "bluetooth-2" : "bluetooth-3")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 30, height: 30)
                     .foregroundColor(bluetoothViewModel.isBluetoothEnabled ? .green : .red)
-
                     .onTapGesture {
-                        showAlert = true // Atualiza o estado para mostrar o alerta
+                        showAlert = true
                     }
                     .padding()
                     .alert(isPresented: $showAlert) {
@@ -42,18 +26,18 @@ struct HomeView: View {
                         )
                     }
                 
+                // Display connected status
                 Rectangle()
                     .fill(Color(hex: "#f37021"))
                     .frame(height: 40)
                     .frame(maxWidth: .infinity)
                     .cornerRadius(10)
                     .overlay(
-                        Text(bluetoothViewModel.selectedDevice != nil ? "DISPOSITIVO CONECTADO: \(bluetoothViewModel.selectedDevice?.name ?? "")" : "NENHUM DISPOSITIVO CONECTADO")
+                        Text(displayConnectedDevices())
                             .foregroundColor(Color(hex: "#1b2c5d"))
                             .bold()
                     )
-                
-                
+                // Conditional display based on connection status
                 if bluetoothViewModel.isConnected {
                     HStack {
                         Image(systemName: bluetoothViewModel.whiteColdLightOn ? "lightbulb.fill" : "lightbulb")
@@ -61,12 +45,11 @@ struct HomeView: View {
                         Image(systemName: bluetoothViewModel.whiteHotLightOn ? "lightbulb.fill" : "lightbulb")
                             .foregroundColor(bluetoothViewModel.whiteHotLightOn ? .yellow : .gray)
                     }
-                    
                     .padding()
-                    
+                                        
                     Button(action: {
                         let command = "00"
-                        bluetoothViewModel.sendCommand(command)
+                        bluetoothViewModel.sendCommandToAllDevices(command)
                         bluetoothViewModel.updateLampStatesForCommand(command)
                     }) {
                         ZStack {
@@ -79,11 +62,10 @@ struct HomeView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    //.background(Color(hex: "#f37021"))
                     
                     Button(action: {
                         let command = "01"
-                        bluetoothViewModel.sendCommand(command)
+                        bluetoothViewModel.sendCommandToAllDevices(command)
                         bluetoothViewModel.updateLampStatesForCommand(command)
                     }) {
                         ZStack {
@@ -96,11 +78,10 @@ struct HomeView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    //.background(Color(hex: "#f37021"))
                     
                     Button(action: {
                         let command = "11"
-                        bluetoothViewModel.sendCommand(command)
+                        bluetoothViewModel.sendCommandToAllDevices(command)
                         bluetoothViewModel.updateLampStatesForCommand(command)
                     }) {
                         ZStack {
@@ -113,11 +94,10 @@ struct HomeView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    //.background(Color(hex: "#f37021"))
                     
                     Button(action: {
                         let command = "10"
-                        bluetoothViewModel.sendCommand(command)
+                        bluetoothViewModel.sendCommandToAllDevices(command)
                         bluetoothViewModel.updateLampStatesForCommand(command)
                     }) {
                         ZStack {
@@ -130,51 +110,57 @@ struct HomeView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    //.background(Color(hex: "#f37021"))
-                    
                 } else {
+                    Text("''Para conectar ao dispositivo, vá para a tela de Bluetooth.''")
+                        .italic()
+                        .font(.system(.body, design: .serif))
+                        .foregroundColor(Color(hex: "#818181"))
                 }
-                Text("''Para conectar ao dispositivo, vá para a tela de Bluetooth.''")
-                    .italic()
-                    .font(.system(.body, design: .serif))
-                    .foregroundColor(Color(hex: "#818181"))
+                
+                // Link to manual and video
                 Text("''Acesse a tela Lunex para ver o vídeo do manual de uso.''")
                     .italic()
                     .font(.system(.body, design: .serif))
                     .foregroundColor(Color(hex: "#818181"))
-
             }
-            .padding(.horizontal)
+            .padding(.horizontal)  // Ensure padding is applied only horizontally
             .padding(.bottom, 50) // Isto adiciona espaço no fundo para não sobrepor a TabView
-    }
+        }
         .navigationTitle("Inicial")
-        .background(Color.init(hex: "#f37021").edgesIgnoringSafeArea(.bottom)) // Aplica a cor vermelha apenas na parte inferior
+        .background(Color.init(hex: "#f37021").edgesIgnoringSafeArea(.bottom))
         .onAppear {
-               self.showAlert = self.showVideoManualAlert
-           }
+            showAlert = showVideoManualAlert
+        }
         .alert(isPresented: $showAlert) {
-           Alert(
-               title: Text("Bem-vindo!"),
-               message: Text("Assista ao vídeo do manual de uso."),
-               primaryButton: .default(Text("Assistir"), action: {
-                   // Abre o link do vídeo
-                   if let url = URL(string: "https://youtu.be/5czw-sAOq2U"), UIApplication.shared.canOpenURL(url) {
-                       UIApplication.shared.open(url)
-                   }
-               }),
-               secondaryButton: .destructive(Text("Não mostrar novamente"), action: {
-                   // Define a chave 'showVideoManualAlert' como verdadeira para não mostrar o alerta novamente
-                   UserDefaults.standard.set(true, forKey: "showVideoManualAlert")
-               })
-           )
-       }
+            Alert(
+                title: Text("Bem-vindo!"),
+                message: Text("Assista ao vídeo do manual de uso."),
+                primaryButton: .default(Text("Assistir"), action: {
+                    // Open the video link
+                    if let url = URL(string: "https://youtu.be/5czw-sAOq2U"), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url)
+                    }
+                }),
+                secondaryButton: .destructive(Text("Não mostrar novamente"), action: {
+                    // Do not show the alert again
+                    UserDefaults.standard.set(true, forKey: "showVideoManualAlert")
+                })
+            )
+        }
+    }
+    
+    // Function to determine the display text for connected devices
+    private func displayConnectedDevices() -> String {
+        let count = bluetoothViewModel.connectedDevices.count
+        if count == 1 {
+            if let device = bluetoothViewModel.connectedDevices.first {
+                let displayName = bluetoothViewModel.getDisplayName(for: device)
+                return "DISPOSITIVO CONECTADO: \(displayName)"
+            }
+        }  else if count > 1 {
+            return "DISPOSITIVOS CONECTADOS: \(count)"
+        }
+        return "NENHUM DISPOSITIVO CONECTADO"
     }
 }
 
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-            .environmentObject(BluetoothViewModel())
-    }
-}

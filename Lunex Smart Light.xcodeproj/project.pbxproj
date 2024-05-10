@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		767292FC2B67DB2E00773D51 /* RenameDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767292FB2B67DB2E00773D51 /* RenameDeviceView.swift */; };
 		767293012B67EF4000773D51 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767293002B67EF4000773D51 /* ColorExtension.swift */; };
 		76729FF52B288F8500F3567D /* Lunex_Smart_LightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76729FF42B288F8500F3567D /* Lunex_Smart_LightApp.swift */; };
 		76729FF72B288F8500F3567D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76729FF62B288F8500F3567D /* ContentView.swift */; };
@@ -17,10 +16,11 @@
 		7672A0112B289E3900F3567D /* AdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A0102B289E3900F3567D /* AdvancedView.swift */; };
 		7672A0132B289E4200F3567D /* BluetoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A0122B289E4200F3567D /* BluetoothView.swift */; };
 		7672A0152B289E4D00F3567D /* LunexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672A0142B289E4D00F3567D /* LunexView.swift */; };
+		769093202BE030D80006F7D5 /* DeviceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7690931F2BE030D80006F7D5 /* DeviceRow.swift */; };
+		769093222BE031090006F7D5 /* GroupManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769093212BE031090006F7D5 /* GroupManagementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		767292FB2B67DB2E00773D51 /* RenameDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameDeviceView.swift; sourceTree = "<group>"; };
 		767293002B67EF4000773D51 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		76729FF12B288F8500F3567D /* Lunex Smart Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunex Smart Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76729FF42B288F8500F3567D /* Lunex_Smart_LightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunex_Smart_LightApp.swift; sourceTree = "<group>"; };
@@ -31,6 +31,8 @@
 		7672A0102B289E3900F3567D /* AdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedView.swift; sourceTree = "<group>"; };
 		7672A0122B289E4200F3567D /* BluetoothView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothView.swift; sourceTree = "<group>"; };
 		7672A0142B289E4D00F3567D /* LunexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunexView.swift; sourceTree = "<group>"; };
+		7690931F2BE030D80006F7D5 /* DeviceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRow.swift; sourceTree = "<group>"; };
+		769093212BE031090006F7D5 /* GroupManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupManagementView.swift; sourceTree = "<group>"; };
 		76C11F5F2B56C419003EB349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,17 +66,18 @@
 		76729FF32B288F8500F3567D /* Lunex Smart Light */ = {
 			isa = PBXGroup;
 			children = (
-				7672A00E2B289DB000F3567D /* HomeView.swift */,
 				7672A0102B289E3900F3567D /* AdvancedView.swift */,
 				7672A0122B289E4200F3567D /* BluetoothView.swift */,
+				767293002B67EF4000773D51 /* ColorExtension.swift */,
+				76729FF62B288F8500F3567D /* ContentView.swift */,
+				7690931F2BE030D80006F7D5 /* DeviceRow.swift */,
+				7672A00E2B289DB000F3567D /* HomeView.swift */,
 				76729FF42B288F8500F3567D /* Lunex_Smart_LightApp.swift */,
 				7672A0142B289E4D00F3567D /* LunexView.swift */,
-				76729FF62B288F8500F3567D /* ContentView.swift */,
-				767292FB2B67DB2E00773D51 /* RenameDeviceView.swift */,
-				767293002B67EF4000773D51 /* ColorExtension.swift */,
 				76729FF82B288F8700F3567D /* Assets.xcassets */,
 				76C11F602B56C419003EB349 /* Info.plist */,
 				76729FFA2B288F8700F3567D /* Preview Content */,
+				769093212BE031090006F7D5 /* GroupManagementView.swift */,
 			);
 			path = "Lunex Smart Light";
 			sourceTree = "<group>";
@@ -158,11 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7672A00F2B289DB000F3567D /* HomeView.swift in Sources */,
+				769093202BE030D80006F7D5 /* DeviceRow.swift in Sources */,
 				7672A0152B289E4D00F3567D /* LunexView.swift in Sources */,
 				7672A0132B289E4200F3567D /* BluetoothView.swift in Sources */,
 				767293012B67EF4000773D51 /* ColorExtension.swift in Sources */,
-				767292FC2B67DB2E00773D51 /* RenameDeviceView.swift in Sources */,
 				76729FF72B288F8500F3567D /* ContentView.swift in Sources */,
+				769093222BE031090006F7D5 /* GroupManagementView.swift in Sources */,
 				7672A0112B289E3900F3567D /* AdvancedView.swift in Sources */,
 				76729FF52B288F8500F3567D /* Lunex_Smart_LightApp.swift in Sources */,
 			);
@@ -308,7 +312,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Lunex Smart Light/Preview Content\"";
 				DEVELOPMENT_TEAM = 3438RFRT99;
 				ENABLE_PREVIEWS = YES;
@@ -330,7 +334,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.lunex.Lunex-Smart-Light";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -346,7 +350,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.3;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Lunex Smart Light/Preview Content\"";
 				DEVELOPMENT_TEAM = 3438RFRT99;
 				ENABLE_PREVIEWS = YES;
@@ -368,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.lunex.Lunex-Smart-Light";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
